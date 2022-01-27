@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(Lato-Regular.ttf);
+}
+body {
+    font-family: Lato;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+.nav {
+    max-width: 1600px;
+    height: 75px;
+    background-color: #222222;
+    .full_navigation {
+        padding-top: 18px;
+        display: flex;
+        justify-content: space-between;
+        .logo_loup {
+            min-width: 115px;
+            align-items: baseline;
+            .logo_img {
+                height: 38px;
+                width: 44px;
+            }
+            .loup_img {
+                height: 26px;
+                width: 26px;
+                padding-left: 41px;
+            }
+        }
+        .menu_acc_basket {
+            min-width: 169px;
+            align-items: baseline;
+            .menu_img {
+                height: 23px;
+                width: 32px;
+            }
+            .account_img {
+                height: 29px;
+                width: 29px;
+                padding-left: 33px;        
+            }
+            .basket_img {
+                height: 29px;
+                width: 31px;
+                padding-left: 33px;
+            }
+        }
+    }
+}
+
+.top_advertisment {
+    display: flex;
+    max-width: 1600px;
+    height: 764px;
+    background-image: url(top_content/Background.svg);
+    .man_img {
+        max-width: 800px;
+        max-height: 764px;
+    }
+    .text {
+        display: flex;
+        padding-top: 290px;
+        padding-left: 5%;
+        max-width: 406px;
+        height: 94px;
+        .line_img {
+            max-width: 12px;
+            max-height: 92px;
+        }
+        &_img {
+            max-width: 377px;
+            padding-left: 16px;
+        }
+    }
+}
+
+.sections {
+    padding-top: 65px;
+    display: grid;
+    row-gap: 30px;
+
+    .genders {
+        display: grid;
+        justify-items: center;
+        column-gap: 30px;
+        row-gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        .gender_card {
+            position: relative;
+            display: grid;
+            place-items: center;
+            .text_card {
+                position: absolute;  
+            }
+        }
+    }
+    .acces_full_card {
+        width: 100%;
+        position: relative;
+        display: grid;
+        place-items: center;
+        .text_acces {
+            position: absolute;
+        }
+    }
+}
+
+.heading_pre_products {
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0;
+    padding-top: 96px;
+    color: #222222;
+}
+.paragraf_pre_products {
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+    padding-top: 6px;
+    color: #9F9F9F;
+}
+
+.some_products {
+    display: grid;
+    justify-items: center;
+    row-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    padding-top: 48px;
+    .product_card {
+        width: 360px;
+        height: 580px;
+        background-image: url(products/Background_card.svg);
+        .product_name {
+            padding-top: 25px;
+            padding-left: 18px;
+        }
+        .pdroduct_discript {
+            padding-top: 12px;
+            padding-left: 16px;
+        }
+        .product_price {
+            padding: 18px;
+        }
+    }
+}
+
+.button_products {
+    font-size: 16px;
+    width: 220px;
+    height: 26px;
+    text-align: center;
+    color: #F26376;;
+    background: white;
+    border: 1px solid #FF6A6A;
+    padding: 14px 38px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 48px;
+}
+
+.footer {
+    max-width: 1600px;
+    .features {
+        min-height: 341px;
+        max-width: 1600px;
+        background: #222224;
+        margin-top: 95px;
+        &_block {
+            display: grid;
+            justify-items: center;
+            column-gap: 30px;
+            row-gap: 48px;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            padding-top: 104px;
+            padding-bottom: 104px;
+            .block_item {
+                display: grid;
+                justify-items: center;
+                align-content: center;
+                width: 360px;
+                height: 134px;
+                .feature_name {
+                    font-weight: normal;
+                    padding-top: 28px;
+                    font-size: 19.96px;
+                    line-height: 24px;
+                    color: #FBFBFB;
+                }
+                .feature_paragraf {
+                    font-weight: 300;
+                    font-size: 13.972px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: #FBFBFB;
+                    padding-top: 16px;
+                }
+            }
+        }
+    }
+    .frame_full {
+        background-image: url(footer_mid/background.jpg);
+        width: 100%;
+        background-size: cover;
+
+        .frame_connect {
+            display: grid;
+
+            row-gap: 48px;
+            grid-template-columns: repeat(auto-fit, minmax(557px, 1fr));
+            padding-top: 87px;
+            padding-bottom: 126px;
+            align-items: center;
+            justify-items: center;
+            .face_comment_box {
+                width: 359px;
+                height: 225px;
+                display: grid;
+                row-gap: 30px;
+                justify-items: center;
+                .face_image {
+                    width: 96px;
+                    height: 96px;
+                }
+                .comment {
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-align: center;
+                    color: #222224;
+                }
+            }
+            .search_block {
+                width: 557px;
+                height: 142px;
+                display: grid;
+                justify-items: center;
+                row-gap: 27px;
+                .sub_paragrafs {
+                    .subscribe_paragraf {
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 167.2%;
+                        text-align: center;
+                        color: #222222;
+                    }
+                    .subscribe_parag_small {
+                        font-size: 16px;
+                        line-height: 167.2%;
+                        text-align: center;
+                        color: #222222;
+                    }
+                }
+                .form_block {
+                    display: flex;
+                    flex-direction: row;
+                    max-width: 360px;
+                    .mail_field {
+                        font-size: 14px;
+                        line-height: 17px;
+                        max-width: 256px;
+                        height: 49px;
+                        background-color: #E1E1E1;
+                        box-sizing: border-box;
+                        border-radius: 25px 0 0 25px;
+                        align-items: center;
+                        opacity: 0.67;
+                        padding: 7px 22px;
+                    }
+                    .subscribe {
+                        font-size: 14px;
+                        line-height: 17px;
+                        align-items: center;
+                        text-align: center;
+                        border-radius: 0 25px 25px 0;
+                        color: #FFFFFF;
+                        background-color: #F16D7F;
+                        max-width: 100px;
+                        height: 49px;
+                        padding: 7px 8px;
+                    }
+                }
+            }
+        }
+    }
+    .rights_socials {
+        max-width: 1600px;
+        height: 79px;
+        background: #222224;
+        .rights_socials_box {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 30px;
+            .paragraf_rights {
+                font-size: 16px;
+                line-height: 19px;
+                color: #FBFBFB;
+            }
+            .sosials_box {
+                .social {
+                    width: 31px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
