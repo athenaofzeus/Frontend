@@ -15,8 +15,7 @@ body {
     margin: 0 auto;
 }
 
-
-.nav {
+nav {
     max-width: 1600px;
     height: 75px;
     background-color: #222222;
@@ -24,6 +23,7 @@ body {
         padding-top: 18px;
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
         .logo_loup {
             min-width: 115px;
             align-items: baseline;
@@ -38,7 +38,7 @@ body {
             }
         }
         .menu_acc_basket {
-            min-width: 169px;
+            padding-right: 20px;
             align-items: baseline;
             .menu_img {
                 height: 23px;
@@ -49,10 +49,28 @@ body {
                 width: 29px;
                 padding-left: 33px;        
             }
-            .basket_img {
-                height: 29px;
-                width: 31px;
-                padding-left: 33px;
+            .basket_num {
+                position: relative;
+                .basket_img {
+                    height: 29px;
+                    width: 31px;
+                    padding-left: 33px;
+
+                }
+                .num_purhase {
+                    display: inline-block;
+                    width: 19px;
+                    height: 19px;
+                    color: white;
+                    background: #f16d7f;
+                    border-radius: 50%;
+                    position: absolute;
+                    text-align: center;
+                    right: -9px;
+                    top: -18px;
+                    font-size: 12px;
+                    line-height: 19px;
+                }
             }
         }
     }
@@ -61,33 +79,35 @@ body {
 .top_advertisment {
     display: flex;
     max-width: 1600px;
-    height: 764px;
+    max-height: 764px;
+    min-height: 363px;
     background-image: url(top_content/Background.svg);
+    align-items: flex-end;
     .man_img {
-        max-width: 800px;
-        max-height: 764px;
+        width: 50%;
+        height: inherit;
     }
     .text {
         display: flex;
-        padding-top: 290px;
-        padding-left: 5%;
-        max-width: 406px;
-        height: 94px;
+        width: 50%;
+        height: 100%;
+        padding-top: 0;
+        padding-bottom: 20%;
         .line_img {
             max-width: 12px;
             max-height: 92px;
         }
         &_img {
-            max-width: 377px;
-            padding-left: 16px;
+            max-width: 344px;
         }
     }
 }
 
-.sections {
+section {
     padding-top: 65px;
     display: grid;
     row-gap: 30px;
+    align-items: center;
 
     .genders {
         display: grid;
@@ -172,7 +192,7 @@ body {
     margin-top: 48px;
 }
 
-.footer {
+footer {
     max-width: 1600px;
     .features {
         min-height: 341px;
@@ -297,18 +317,24 @@ body {
     }
     .rights_socials {
         max-width: 1600px;
-        height: 79px;
+        min-height: 79px;
         background: #222224;
         .rights_socials_box {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
             padding-top: 30px;
-            .paragraf_rights {
-                font-size: 16px;
-                line-height: 19px;
-                color: #FBFBFB;
+            /* grid-template-columns: repeat(2, 1fr); */
+            grid-template-columns: 1fr 1fr;
+            .box_rights {
+                padding-left: 3%;
+                .paragraf_rights {
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #FBFBFB;
+                }
             }
             .sosials_box {
+                padding-right: 3%;
+                text-align: right;
                 .social {
                     width: 31px;
                     height: 32px;
@@ -316,4 +342,119 @@ body {
             }
         }
     }
+}
+
+
+/* catalog--start */
+
+.new_arrivals {
+    max-width: 1600px;
+    height: 148px;
+    background: #F8F3F4;
+    .arriv_box {
+        display: flex;
+        justify-content: space-between;
+        padding: 59px 3%;
+        .paragraf_new_arriv {
+            color: #F16D7F;
+            font-size: 24px;
+            line-height: 29px;
+        }
+        .choises {
+            font-size: 14px;
+            line-height: 17px;
+            color: #636363;
+            .choise {
+                color: #F16D7F;
+            }
+        }
+    }
+}
+
+.all_filters {
+    display: flex;
+    flex-direction: row;
+    max-width: 690px;
+    justify-content: space-between;
+    padding-top: 51px;
+    padding-left: 20px;
+    padding-bottom: 65px;
+    .ranges {
+        width: 296px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.pages_menu {
+    display: flex;
+    justify-content: space-around;
+    .pages_box {
+        border: 1px solid #EBEBEB;
+        width: 282px;
+        height: 43px;
+        margin-top: 48px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: space-evenly;
+        flex-direction: row;
+        .pages_text {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            padding: 11px 17px;
+            color: rgb(197, 190, 190);
+            .page_choise {
+                color: rgba(241, 109, 127, 1);  
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .account_img, .basket_num  {
+        display: none;
+    }
+    .top_advertisment {
+        align-items: center;
+        justify-content: center;
+        .man_img {
+            display: none;
+        }
+        .text {
+            padding-bottom: 0;
+        }   
+    }
+    .rights_socials {
+        height: 143px;
+        .rights_socials_box {
+            justify-items: center;
+            row-gap: 40px;
+            grid-template-areas: 
+            "socials socials"
+            "rights rights";
+            .box_rights {
+                grid-area: rights;
+            }
+            .sosials_box {
+                grid-area: socials;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 425px) {
+    .arriv_box {
+        flex-direction: column;
+        align-items: center;
+   }
+   .filter_text_general {
+       display: none;
+   }
+   .filter_symbol {
+       width: 37px;
+   }
+
 }
