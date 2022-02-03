@@ -85,7 +85,7 @@ nav {
     align-items: flex-end;
     .man_img {
         width: 50%;
-        height: inherit;
+        height: auto;
     }
     .text {
         display: flex;
@@ -93,6 +93,7 @@ nav {
         height: 100%;
         padding-top: 0;
         padding-bottom: 20%;
+        justify-content: center;
         .line_img {
             max-width: 12px;
             max-height: 92px;
@@ -114,7 +115,7 @@ section {
         justify-items: center;
         column-gap: 30px;
         row-gap: 32px;
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
         .gender_card {
             position: relative;
             display: grid;
@@ -122,15 +123,20 @@ section {
             .text_card {
                 position: absolute;  
             }
+            .gender_img {
+                width: 100%;
+            }
         }
     }
     .acces_full_card {
-        width: 100%;
         position: relative;
         display: grid;
         place-items: center;
         .text_acces {
             position: absolute;
+        }
+        .acces_img {
+            width: 100%;
         }
     }
 }
@@ -200,18 +206,15 @@ footer {
         background: #222224;
         margin-top: 95px;
         &_block {
-            display: grid;
+            display: flex;
             justify-items: center;
-            column-gap: 30px;
-            row-gap: 48px;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
             padding-top: 104px;
             padding-bottom: 104px;
             .block_item {
                 display: grid;
                 justify-items: center;
                 align-content: center;
-                width: 360px;
+                max-width: 360px;
                 height: 134px;
                 .feature_name {
                     font-weight: normal;
@@ -238,9 +241,8 @@ footer {
 
         .frame_connect {
             display: grid;
-
             row-gap: 48px;
-            grid-template-columns: repeat(auto-fit, minmax(557px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(376px, 1fr));
             padding-top: 87px;
             padding-bottom: 126px;
             align-items: center;
@@ -263,7 +265,7 @@ footer {
                 }
             }
             .search_block {
-                width: 557px;
+                max-width: 557px;
                 height: 142px;
                 display: grid;
                 justify-items: center;
@@ -412,6 +414,141 @@ footer {
     }
 }
 
+
+/* products--start */
+
+.top_photo_block {
+    background-color: #F7F7F7;
+    max-width: 1600px;
+    max-height: 777px;
+    display: grid;
+    grid-template-columns: 47px 1fr 47px;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid #EAEAEA;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .each_arrow {
+        display: grid;
+        place-items: center;
+        position: relative;
+        .arrow_img {
+            position: absolute;
+        }
+    }
+}
+
+.women_collection {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    height: 601px;
+    position: relative;
+    margin-top: -3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header_block {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #F16D7F;
+        padding-top: 64px;
+    }
+    .line {
+        background: #EF5B70;
+        width: 63px;
+        height: 3px;
+        margin: 12px;
+    }
+    .product_header {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        color: #4D4D4D;
+    }
+    article {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #5E5E5E;
+        padding-top: 48px;
+        max-width: 564px;
+    }
+    .w_col_price {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        padding-top: 32px;
+        color: #EF5B70;
+    }
+    hr {
+        border: 1px solid #EAEAEA;
+        background-color: #EAEAEA;
+        width: 57%;
+        margin-top: 65px;
+    }
+    .w_box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 373px;
+        padding-top: 65px;
+        @media (max-width: 424px) {
+            width: 304px;
+            padding-top: 49px;
+        }
+        .filter {
+            font-size: 14px;
+            line-height: 17px;
+            color: #6F6E6E;
+            @media (max-width: 424px) {
+                font-size: 10px;
+                line-height: 12px;
+            }
+        }
+    }
+    .add_product {
+        border: 1px solid #FF6A6A;
+        width: 211px;
+        height: 47px;
+        background: #FFFFFF;
+        margin-top: 48px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        span {
+            font-size: 16px;
+            line-height: 19px;
+            color: #F26376;
+        }
+    }
+}
+
+.prod_page {
+    @media (max-width: 768px) {
+        :nth-child(3) { display: none;}
+    }
+    @media (max-width: 425px) {
+        :nth-child(3) { display:unset;}
+        :nth-child(2) { display: none;}
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .features_block {
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        .block_item {
+            padding: 48px;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .account_img, .basket_num  {
         display: none;
@@ -425,6 +562,22 @@ footer {
         .text {
             padding-bottom: 0;
         }   
+    }
+    .features_block {
+        grid-template-columns: repeat(1, 360px);
+        grid-template-areas:
+        "first"
+        "second"
+        "third";
+        .first_feature {
+            grid-area: first;
+        }
+        .second_feature {
+            grid-area: second;
+        }
+        .third_feature {
+            grid-area: third;
+        }
     }
     .rights_socials {
         height: 143px;
