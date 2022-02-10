@@ -17,7 +17,7 @@
                 <a href="#"><img class="loup_img" src="navigation_panel/loupe.svg" alt="loupe"></a>
             </div>
             <div class="menu_acc_basket">
-                <img class="menu_img" src="navigation_panel/menu_symb.svg" alt="menu">
+                <a href="#"><img class="menu_img" src="navigation_panel/menu_symb.svg" alt="menu"></a>
                 <a href="#"><img class="account_img" src="navigation_panel/pers_acc_symb.svg" alt="account"></a>
                 <span class="basket_num">
                     <a href="#"><img class="basket_img" src="navigation_panel/basket_symb.svg" alt="basket"></a>
@@ -29,88 +29,56 @@
 
     <div class="new_arrivals">
         <div class="arriv_box container">
-            <p class="paragraf_new_arriv">NEW ARRIVALS</p>
-            <p class="choises">HOME / MEN / <span class="choise"> NEW ARRIVALS</span> </p>
+            <p class="paragraf_new_arriv">SHOPPING CART</p>
         </div>
     </div>
 
-    <div class="top_photo_block">
-        <div class="each_arrow">
-            <img src="product_page/arrow_left.svg" alt="image" class="arrow_img">
-            <img src="product_page/box_grey.svg" alt="image" class="arrow_back">
+    <main class="carts_full_box container">
+        <div class="product_item_1">
+            <img src="products/hoody.jpg" alt="image" class="product_img">
+            <div class="product_inf">
+                <div class="product_name">MANGO PEOPLE T-SHIRT</div>
+                <div class="product_property">Price:<span>$300</span></div>
+                <div class="product_property">Color:<span>Red</span></div>
+                <div class="product_property">Size:<span>Xl</span></div>
+                <div class="product_property">Quantity: <input placeholder="1" type="text"></div>
+            </div>
+            <a href="#"><img src="top_content/cross.svg" alt="image" class="cross_img"></a>
         </div>
 
-        <img src="product_page/top_photo.png" alt="image">
-
-        <div class="each_arrow">
-            <img src="product_page/box_grey.svg" alt="image" class="arrow_back">
-            <img src="product_page/arrow_right.svg" alt="image" class="arrow_img">
+        <div class="form_adress">
+            <h2>SHIPPING ADRESS</h2>
+            <input type="text" placeholder="Bangladesh">
+            <input type="text" placeholder="State">
+            <input type="text" placeholder="Postcode / Zip">
+            <button class="form_button">GET A QUOTE</button>
         </div>
 
-    </div>
+        <div class="product_item_2">
+            <img src="products/jacket_women.jpg" alt="image" class="product_img">
+            <div class="product_inf">
+                <div class="product_name">MANGO PEOPLE T-SHIRT</div>
+                <div class="product_property">Price:<span>$300</span></div>
+                <div class="product_property">Color:<span>Red</span></div>
+                <div class="product_property">Size:<span>Xl</span></div>
+                <div class="product_property">Quantity: <input placeholder="1" type="text"></div>
+            </div>
+            <a href="#"><img src="top_content/cross.svg" alt="image" class="cross_img"></a>
+        </div>
 
-    <main>
-        <div class="women_collection container">
-            <h3 class="header_block">WOMEN COLLECTION</h3>
-            <div class="line"></div>
-            <h2 class="product_header">MOSCHINO CHEAP AND CHIC</h2>
-            <article>Compellingly actualize fully researched processes before proactive outsourcing. Progressively
-                syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core
-                competencies rather than exceptional portals. </article>
-            <span class="w_col_price">$561</span>
+        <div class="total_price">
+            <div class="sub_price">SUB TOTAL $900</div>
+            <div class="grand_price">SUB TOTAL <span>$900</span></div>
             <hr>
-            <div class="w_box">
-                <div class="w_box_items">
-                    <span class="filter">CHOOSE COLOR</span>
-                    <img src="product_page/arrow_down.svg" alt="immage">
-                </div>
-                <div class="w_box_items">
-                    <span class="filter">CHOOSE SIZE </span>
-                    <img src="product_page/arrow_down.svg" alt="img">
-                </div>
-                <div class="w_box_items">
-                    <span class="filter">QUANTITY</span>
-                    <img src="product_page/arrow_down.svg" alt="image">
-                </div>
-
-            </div>
-            <button class="add_product">
-                <img src="product_page/basket.svg" alt="image">
-                <span>Add to Cart</span>
-            </button>
+            <button class="check_out">PROCEED TO CHECKOUT</button>
         </div>
-        <div class="some_products prod_page container">
-            <div class="product_card">
-                <img src="products/jacket.jpg" alt="image" class="product_image">
-                <div class="priduct_card_discript">
-                    <div class="product_name">ELLERY X M'O CAPSULE</div>
-                    <div class="pdroduct_discript">Known for her sculptural takes on traditional tailoring, Australian
-                        arbiter of cool Kym Ellery teams up with Moda Operandi.</div>
-                    <div class="product_price">$52.00</div>
-                </div>
-            </div>
 
-            <div class="product_card">
-                <img src="products/costume.jpg" alt="image" class="product_image">
-                <div class="priduct_card_discript">
-                    <div class="product_name">ELLERY X M'O CAPSULE</div>
-                    <div class="pdroduct_discript">Known for her sculptural takes on traditional tailoring, Australian
-                        arbiter of cool Kym Ellery teams up with Moda Operandi.</div>
-                    <div class="product_price">$52.00</div>
-                </div>
-            </div>
-
-            <div class="product_card">
-                <img src="products/hoody.jpg" alt="image" class="product_image">
-                <div class="priduct_card_discript">
-                    <div class="product_name">ELLERY X M'O CAPSULE</div>
-                    <div class="pdroduct_discript">Known for her sculptural takes on traditional tailoring, Australian
-                        arbiter of cool Kym Ellery teams up with Moda Operandi.</div>
-                    <div class="product_price">$52.00</div>
-                </div>
-            </div>
-
+        <div class="buttons_box">
+            <button class="btn_items">CLEAR SHOPPING CART</button>
+            <button class="btn_items">CONTINUE SHOPPING</button>
         </div>
+
+
     </main>
 
     <footer>
@@ -171,6 +139,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
